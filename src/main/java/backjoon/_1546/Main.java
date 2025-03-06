@@ -1,4 +1,4 @@
-package backjoon.backjoon_11720;
+package backjoon._1546;
 
 import java.io.BufferedReader;
 import java.io.IOException;
@@ -10,13 +10,16 @@ public class Main {
         BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
         int N = Integer.parseInt(br.readLine());
         String number = br.readLine();
-        String[] split = number.split("");
-        int result = 0;
+        String[] split = number.split(" ");
+        int maxScore = 0;
+        int sumScore = 0;
 
         for(int i=0; i<N; i++){
-            result += Integer.parseInt(split[i]);
+            int score = Integer.parseInt(split[i]);
+            maxScore = Math.max(maxScore, score);
+            sumScore += score;
         }
 
-        System.out.println(result);
+        System.out.println(sumScore * 100 / maxScore / N);
     }
 }

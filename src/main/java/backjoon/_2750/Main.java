@@ -1,4 +1,4 @@
-package backjoon.backjoon_2750;
+package backjoon._2750;
 
 import java.io.*;
 import java.util.ArrayList;
